@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <text x="90" y="100" fill="#0f172a" font-size="42" font-family="Arial" font-weight="700">Roadmap</text>
+  <rect x="90" y="160" width="230" height="420" rx="20" fill="#dbeafe"/>
+  <text x="130" y="215" fill="#1d4ed8" font-size="26" font-family="Arial" font-weight="700">Phase 1</text>
+  <text x="120" y="270" fill="#1e3a8a" font-size="20" font-family="Arial">Catalogue</text>
+  <text x="120" y="310" fill="#1e3a8a" font-size="20" font-family="Arial">Orders</text>
+  <text x="120" y="350" fill="#1e3a8a" font-size="20" font-family="Arial">Reservation</text>
+
+  <rect x="360" y="160" width="230" height="420" rx="20" fill="#dcfce7"/>
+  <text x="400" y="215" fill="#166534" font-size="26" font-family="Arial" font-weight="700">Phase 2</text>
+  <text x="390" y="270" fill="#166534" font-size="20" font-family="Arial">Approval rules</text>
+  <text x="390" y="310" fill="#166534" font-size="20" font-family="Arial">Loyalty engine</text>
+  <text x="390" y="350" fill="#166534" font-size="20" font-family="Arial">Audit trail</text>
+
+  <rect x="630" y="160" width="230" height="420" rx="20" fill="#fef3c7"/>
+  <text x="670" y="215" fill="#92400e" font-size="26" font-family="Arial" font-weight="700">Phase 3</text>
+  <text x="660" y="270" fill="#92400e" font-size="20" font-family="Arial">Warehouse ops</text>
+  <text x="660" y="310" fill="#92400e" font-size="20" font-family="Arial">Dispatch</text>
+  <text x="660" y="350" fill="#92400e" font-size="20" font-family="Arial">Invoice flow</text>
+
+  <rect x="900" y="160" width="230" height="420" rx="20" fill="#fce7f3"/>
+  <text x="945" y="215" fill="#9d174d" font-size="26" font-family="Arial" font-weight="700">Phase 4</text>
+  <text x="940" y="270" fill="#9d174d" font-size="20" font-family="Arial">ERP sync</text>
+  <text x="940" y="310" fill="#9d174d" font-size="20" font-family="Arial">CRM</text>
+  <text x="940" y="350" fill="#9d174d" font-size="20" font-family="Arial">Scale-up</text>
+</svg>

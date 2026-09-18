@@ -1,0 +1,60 @@
+Metayb Application Requirements
+
+1. Product and Distributor Management
+1.1 The system shall maintain a catalogue of products with SKU, product name, unit price, stock quantity, and reserved quantity.
+1.2 The catalogue page shall list every product with its SKU, name, unit price, and available stock.
+1.3 The system shall maintain distributor records with distributor ID, name, credit limit, loyalty tier, and trailing points.
+
+2. Order Placement and Processing
+2.1 A distributor shall be able to place an order with one or more products and quantities.
+2.2 The system shall validate whether the requested quantity is available after considering stock already reserved.
+2.3 Each order shall include subtotal, discount amount, total after discount, and order status.
+2.4 When the total exceeds the distributor's available credit, the order shall be created in pendingApproval status instead of confirmed.
+2.5 Confirmed orders shall earn loyalty points based on the total after discount.
+
+3. Warehouse Stock Logic
+3.1 Reserved stock must be tracked separately from on-hand stock.
+3.2 When an order is placed, the reserved quantity shall increase for the ordered products.
+3.3 When an order is cancelled or rejected, the reserved quantity shall be released back to available stock.
+3.4 When an order is dispatched, the stock shall be deducted from both stock quantity and reserved quantity.
+
+4. Loyalty and Discount Rules
+4.1 Bronze tier: 0 to 999 points, 0% discount.
+4.2 Silver tier: 1000 to 4999 points, 3% discount.
+4.3 Gold tier: 5000+ points, 6% discount.
+4.4 Discount is fixed at the time the order is created using the distributor's current loyalty tier.
+4.5 Loyalty points are awarded only when an order reaches confirmed status.
+4.6 If a confirmed order is cancelled, the awarded points shall be reversed and the distributor's tier recalculated.
+
+5. UI Requirements
+5.1 The React UI shall include three primary views: Catalogue, Orders, and Dashboard.
+5.2 The Catalogue page shall display all products and enable order quantity entry for each SKU.
+5.3 The Catalogue page shall let the user select a distributor and preview subtotal, discount, and total before placing the order.
+5.4 The Orders page shall list all orders and show the selected order's details, status, and line items.
+5.5 The Orders page shall allow a sales manager to move orders through valid status transitions such as confirm, cancel, and dispatch.
+5.6 The Dashboard page shall show summary metrics such as total products, distributor count, open orders, and revenue.
+5.7 The UI shall integrate with the backend REST APIs for products, distributors, orders, and dashboard summary.
+5.8 The UI shall handle loading, success, and error states gracefully, with fallback demo data when the API is unavailable.
+5.9 The interface shall be responsive and usable on desktop and tablet widths.
+
+6. Backend Integration Requirements
+6.1 The frontend shall communicate with the Express API at http://localhost:5000/api.
+6.2 Product, distributor, and order data must be retrieved from the Postgres database through the backend APIs.
+6.3 Order creation, status updates, and dashboard summary shall be server-controlled to enforce business rules.
+6.4 The backend shall return JSON responses with clear error messages for validation and business-rule violations.
+
+7. Delivery Scope
+7.1 Deliver a working Vite React frontend and an Express backend in separate folders.
+7.2 Implement a PostgreSQL-ready schema and real database queries.
+7.3 Complete end-to-end integration between UI, backend, and database.
+7.4 Keep all business logic and approval rules on the server side.
+
+===========================================================================================================
+
+Deliverables:
+
+source code and run instruction - file: readme.md - specificaiton: steps to run the full applciation locally in no more than 5 commands
+database desgin - file: schema.dbml - every table column, data type, key and relationship present in the running data. must match the database exactly.
+engineering notes - file: notes.md - 400-800 words under the five headings in E1.(architechture - components, how they communicate and where each rules r1 - r8 is enforeced(frontend, api, database, or backend job), key decisions: three to fice decisions each with the alternative rejected and the reason. known defects - any behaviour you know to be incorrect or fragile. ai tools - tools used and the task types each was used for, one case where ai generated ouptu was incorrect and how it was detected the single most usefull prompt.)
+pitch deck - file: pitch.md -> 4 - 6 slides per E2 (1, the problem faced by the manufacuter and its distrubutors, 2-4 -> the sstem as experienced b the user, one screenshot per slide, 5-> requirements to go live: integration, data migration, and rollout, 6 -> roadmap)
+one-page summary : file -> onepage.md -> maximum 300 words, what the system does, who use it what it replace and non - technical audiance

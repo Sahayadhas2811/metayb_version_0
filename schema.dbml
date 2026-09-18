@@ -1,0 +1,61 @@
+Table products {
+  sku varchar(50) [pk, not null]
+  name varchar(255) [not null]
+  unit_price decimal(10,2) [not null, note: 'CHECK (unit_price >= 0)']
+  stock_quantity integer [not null, default: 0, note: 'CHECK (stock_quantity >= 0)']
+  reserved_quantity integer [not null, default: 0, note: 'CHECK (reserved_quantity >= 0)']
+  created_at timestamptz [not null, default: `NOW()`]
+}
+
+Table distributors {
+  id varchar(50) [pk, not null]
+  name varchar(255) [not null]
+  credit_limit decimal(12,2) [not null, default: 0]
+  trailing_points integer [not null, default: 0]
+  loyalty_tier varchar(20) [not null, default: 'Bronze', note: "CHECK (loyalty_tier IN ('Bronze','Silver','Gold'))"]
+  created_at timestamptz [not null, default: `NOW()`]
+}
+
+Table sales_managers {
+  id serial [pk, not null]
+  name varchar(255) [not null]
+  email varchar(255) [not null, unique]
+  created_at timestamptz [not null, default: `NOW()`]
+}
+
+Table orders {
+  id varchar(50) [pk, not null]
+  distributor_id varchar(50) [not null]
+  status varchar(30) [not null, note: "CHECK (status IN ('placed','pendingApproval','confirmed','dispatched','delivered','rejected','cancelled'))"]
+  subtotal decimal(12,2) [not null, default: 0]
+  discount_rate decimal(5,4) [not null, default: 0]
+  discount_amount decimal(12,2) [not null, default: 0]
+  total_after_discount decimal(12,2) [not null, default: 0]
+  points_earned integer [not null, default: 0]
+  created_at timestamptz [not null, default: `NOW()`]
+  updated_at timestamptz [not null, default: `NOW()`]
+
+  indexes {
+    (distributor_id)
+    (status)
+  }
+}
+
+Table order_items {
+  id serial [pk, not null]
+  order_id varchar(50) [not null]
+  sku varchar(50) [not null]
+  quantity integer [not null, note: 'CHECK (quantity > 0)']
+  unit_price decimal(10,2) [not null]
+  line_total decimal(12,2) [not null, default: 0]
+  created_at timestamptz [not null, default: `NOW()`]
+
+  indexes {
+    (order_id)
+    (sku)
+  }
+}
+
+Ref: orders.distributor_id > distributors.id
+Ref: order_items.order_id > orders.id [delete: cascade]
+Ref: order_items.sku > products.sku

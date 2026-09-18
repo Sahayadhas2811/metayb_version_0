@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <text x="90" y="100" fill="#f8fafc" font-size="42" font-family="Arial" font-weight="700">Requirements to go live</text>
+  <rect x="90" y="150" width="280" height="420" rx="20" fill="#111827" stroke="#334155"/>
+  <text x="135" y="200" fill="#f8fafc" font-size="26" font-family="Arial" font-weight="700">Integration</text>
+  <text x="135" y="250" fill="#cbd5e1" font-size="20" font-family="Arial">• ERP sync</text>
+  <text x="135" y="290" fill="#cbd5e1" font-size="20" font-family="Arial">• Warehouse APIs</text>
+  <text x="135" y="330" fill="#cbd5e1" font-size="20" font-family="Arial">• Notifications</text>
+
+  <rect x="420" y="150" width="280" height="420" rx="20" fill="#111827" stroke="#334155"/>
+  <text x="470" y="200" fill="#f8fafc" font-size="26" font-family="Arial" font-weight="700">Data migration</text>
+  <text x="470" y="250" fill="#cbd5e1" font-size="20" font-family="Arial">• Product master</text>
+  <text x="470" y="290" fill="#cbd5e1" font-size="20" font-family="Arial">• Distributor records</text>
+  <text x="470" y="330" fill="#cbd5e1" font-size="20" font-family="Arial">• Historical orders</text>
+
+  <rect x="750" y="150" width="280" height="420" rx="20" fill="#111827" stroke="#334155"/>
+  <text x="795" y="200" fill="#f8fafc" font-size="26" font-family="Arial" font-weight="700">Rollout</text>
+  <text x="795" y="250" fill="#cbd5e1" font-size="20" font-family="Arial">• Pilot customers</text>
+  <text x="795" y="290" fill="#cbd5e1" font-size="20" font-family="Arial">• Training</text>
+  <text x="795" y="330" fill="#cbd5e1" font-size="20" font-family="Arial">• Monitoring</text>
+  <text x="795" y="370" fill="#cbd5e1" font-size="20" font-family="Arial">• SLA controls</text>
+</svg>

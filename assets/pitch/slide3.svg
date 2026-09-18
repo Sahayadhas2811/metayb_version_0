@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <text x="90" y="100" fill="#f8fafc" font-size="42" font-family="Arial" font-weight="700">Operations view</text>
+  <rect x="80" y="140" width="1120" height="480" rx="22" fill="#111827" stroke="#334155"/>
+  <rect x="115" y="180" width="1050" height="60" rx="12" fill="#1e293b"/>
+  <text x="145" y="220" fill="#e2e8f0" font-size="22" font-family="Arial">Order ID</text>
+  <text x="360" y="220" fill="#e2e8f0" font-size="22" font-family="Arial">Distributor</text>
+  <text x="620" y="220" fill="#e2e8f0" font-size="22" font-family="Arial">Status</text>
+  <text x="830" y="220" fill="#e2e8f0" font-size="22" font-family="Arial">Value</text>
+  <text x="980" y="220" fill="#e2e8f0" font-size="22" font-family="Arial">Action</text>
+
+  <rect x="115" y="270" width="1050" height="60" rx="12" fill="#0b1220"/>
+  <text x="145" y="310" fill="#f8fafc" font-size="20" font-family="Arial">ORD-201</text>
+  <text x="360" y="310" fill="#f8fafc" font-size="20" font-family="Arial">Metro Supply Co.</text>
+  <text x="620" y="310" fill="#86efac" font-size="20" font-family="Arial">Confirmed</text>
+  <text x="830" y="310" fill="#f8fafc" font-size="20" font-family="Arial">₹2,134</text>
+  <rect x="980" y="282" width="120" height="36" rx="10" fill="#22c55e"/>
+  <text x="1015" y="306" fill="#052e16" font-size="18" font-family="Arial" font-weight="700">Dispatch</text>
+
+  <rect x="115" y="350" width="1050" height="60" rx="12" fill="#0b1220"/>
+  <text x="145" y="390" fill="#f8fafc" font-size="20" font-family="Arial">ORD-202</text>
+  <text x="360" y="390" fill="#f8fafc" font-size="20" font-family="Arial">Prime Trade Hub</text>
+  <text x="620" y="390" fill="#fbbf24" font-size="20" font-family="Arial">Pending</text>
+  <text x="830" y="390" fill="#f8fafc" font-size="20" font-family="Arial">₹4,888</text>
+  <rect x="980" y="362" width="120" height="36" rx="10" fill="#f59e0b"/>
+  <text x="1013" y="386" fill="#1f2937" font-size="18" font-family="Arial" font-weight="700">Review</text>
+</svg>
